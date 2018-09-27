@@ -1,2 +1,2 @@
-# bn
-Bayesian Networks Student Performance model
+# Bayesian Networks
+Student Performance model
