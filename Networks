@@ -1,0 +1,160 @@
+%optie loops
+dag {
+Absences [pos="0.556,0.066"]
+Activities [pos="0.733,0.098"]
+Age [pos="0.857,0.039"]
+Failures [pos="0.443,0.051"]
+Famrel [pos="0.448,0.011"]
+Famsup [pos="0.519,0.028"]
+Fedu [pos="0.646,-0.026"]
+Fjob [pos="0.577,-0.012"]
+Freetime [pos="0.735,0.145"]
+Goout [pos="0.801,0.115"]
+Grades [pos="0.563,0.168"]
+Health [pos="0.632,0.066"]
+Higher [pos="0.598,0.015"]
+IQ [pos="0.859,-0.017"]
+Medu [pos="0.502,-0.032"]
+Mjob [pos="0.491,-0.012"]
+Paid [pos="0.351,0.064"]
+Romantic [pos="0.852,0.136"]
+School [pos="0.670,0.022"]
+Schoolsup [pos="0.258,0.113"]
+Studytime [pos="0.366,0.145"]
+Subject [pos="0.296,0.003"]
+Traveltime [pos="0.629,0.037"]
+Absences -> Grades
+Absences <-> Failures
+Activities <-> Freetime
+Activities <-> Studytime
+Age -> Activities
+Age -> Romantic
+Age -> Studytime
+Failures -> Grades
+Failures -> Paid
+Failures -> Schoolsup
+Failures -> Studytime
+Famrel -> Famsup
+Famrel -> Paid
+Famsup -> Grades
+Famsup -> Paid
+Famsup -> Studytime
+Fedu -> Fjob
+Fedu -> Higher
+Fjob -> Famrel
+Freetime -> Grades
+Freetime <-> Goout
+Freetime <-> Studytime
+Goout -> Romantic
+Health -> Absences
+Health -> Grades
+Health -> Studytime
+Higher -> Famsup
+Higher -> School
+Higher -> Studytime
+IQ -> Grades
+IQ -> Higher
+IQ -> Studytime
+Medu -> Higher
+Medu -> Mjob
+Mjob -> Famrel
+Paid -> Freetime
+Paid -> Grades
+Paid -> Studytime
+Romantic -> Freetime
+School -> Schoolsup
+School -> Traveltime
+Schoolsup -> Freetime
+Schoolsup -> Grades
+Schoolsup -> Studytime
+Studytime -> Grades
+Subject -> Absences
+Subject -> Failures
+Subject -> Famsup
+Subject -> Grades
+Subject -> Paid
+Subject -> Schoolsup
+Subject -> Studytime
+Traveltime -> Absences
+Traveltime -> Freetime
+}
+
+% optie unlooped
+dag {
+Absences [pos="0.557,0.055"]
+Activities [pos="0.733,0.098"]
+Age [pos="0.857,0.039"]
+Failures [pos="0.435,0.061"]
+Famrel [pos="0.448,0.011"]
+Famsup [pos="0.519,0.028"]
+Fedu [pos="0.646,-0.026"]
+Fjob [pos="0.577,-0.012"]
+Freetime [pos="0.735,0.145"]
+Goout [pos="0.801,0.115"]
+Grades [pos="0.563,0.168"]
+Health [pos="0.632,0.066"]
+Higher [pos="0.598,0.015"]
+IQ [pos="0.859,-0.017"]
+Medu [pos="0.502,-0.032"]
+Mjob [pos="0.491,-0.012"]
+Paid [pos="0.351,0.064"]
+Romantic [pos="0.852,0.136"]
+School [pos="0.670,0.022"]
+Schoolsup [pos="0.258,0.113"]
+Studytime [pos="0.366,0.145"]
+Subject [pos="0.296,0.003"]
+Traveltime [pos="0.629,0.037"]
+Absences -> Failures
+Absences -> Grades
+Activities -> Freetime
+Age -> Activities
+Age -> Romantic
+Age -> Studytime
+Failures -> Grades
+Failures -> Paid
+Failures -> Schoolsup
+Failures -> Studytime
+Famrel -> Famsup
+Famrel -> Paid
+Famsup -> Grades
+Famsup -> Paid
+Famsup -> Studytime
+Fedu -> Fjob
+Fedu -> Higher
+Fjob -> Famrel
+Freetime -> Grades
+Freetime -> Studytime
+Goout -> Freetime
+Goout -> Romantic
+Health -> Absences
+Health -> Grades
+Health -> Studytime
+Higher -> Famsup
+Higher -> School
+Higher -> Studytime
+IQ -> Grades
+IQ -> Higher
+IQ -> Studytime
+Medu -> Higher
+Medu -> Mjob
+Mjob -> Famrel
+Paid -> Freetime
+Paid -> Grades
+Paid -> Studytime
+Romantic -> Freetime
+School -> Schoolsup
+School -> Traveltime
+Schoolsup -> Freetime
+Schoolsup -> Grades
+Schoolsup -> Studytime
+Studytime -> Grades
+Subject -> Absences
+Subject -> Failures
+Subject -> Famsup
+Subject -> Grades
+Subject -> Paid
+Subject -> Schoolsup
+Subject -> Studytime
+Traveltime -> Absences
+Traveltime -> Freetime
+}
