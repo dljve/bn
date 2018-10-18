@@ -1,0 +1,524 @@
+absences ⊥ activities
+absences ⊥ age
+absences ⊥ famrel | Fjob, Mjob
+absences ⊥ famrel | Fedu, Mjob
+absences ⊥ famrel | Fjob, Medu
+absences ⊥ famrel | Fedu, Medu
+absences ⊥ famrel | higher
+absences ⊥ famrel | school
+absences ⊥ famrel | traveltime
+absences ⊥ famsup | higher, subject
+absences ⊥ famsup | school, subject
+absences ⊥ famsup | subject, traveltime
+absences ⊥ Fedu | higher
+absences ⊥ Fedu | school
+absences ⊥ Fedu | traveltime
+absences ⊥ Fjob | Fedu
+absences ⊥ Fjob | higher
+absences ⊥ Fjob | school
+absences ⊥ Fjob | traveltime
+absences ⊥ freetime | paid, schoolsup, traveltime
+absences ⊥ freetime | failures, subject, traveltime
+absences ⊥ goout
+absences ⊥ higher | school
+absences ⊥ higher | traveltime
+absences ⊥ IQ | higher
+absences ⊥ IQ | school
+absences ⊥ IQ | traveltime
+absences ⊥ Medu | higher
+absences ⊥ Medu | school
+absences ⊥ Medu | traveltime
+absences ⊥ Mjob | Medu
+absences ⊥ Mjob | higher
+absences ⊥ Mjob | school
+absences ⊥ Mjob | traveltime
+absences ⊥ paid | failures, famrel, famsup, subject
+absences ⊥ paid | failures, higher, subject
+absences ⊥ paid | failures, school, subject
+absences ⊥ paid | failures, subject, traveltime
+absences ⊥ romantic
+absences ⊥ school | traveltime
+absences ⊥ schoolsup | failures, school, subject
+absences ⊥ schoolsup | failures, subject, traveltime
+absences ⊥ studytime | age, failures, freetime, health, higher, paid, schoolsup, subject
+absences ⊥ studytime | age, failures, freetime, health, paid, school, schoolsup, subject
+absences ⊥ studytime | activities, failures, freetime, goout, health, higher, paid, romantic, schoolsup, subject
+absences ⊥ studytime | activities, failures, freetime, goout, health, paid, romantic, school, schoolsup, subject
+absences ⊥ studytime | failures, health, subject, traveltime
+activities ⊥ failures
+activities ⊥ famrel
+activities ⊥ famsup
+activities ⊥ Fedu
+activities ⊥ Fjob
+activities ⊥ goout
+activities ⊥ G3 | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+activities ⊥ G3 | absences, age, failures, freetime, health, higher, paid, schoolsup, subject
+activities ⊥ G3 | absences, age, freetime, health, paid, school, schoolsup, subject
+activities ⊥ G3 | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+activities ⊥ G3 | age, freetime, paid, schoolsup, traveltime
+activities ⊥ health
+activities ⊥ higher
+activities ⊥ IQ
+activities ⊥ Medu
+activities ⊥ Mjob
+activities ⊥ paid
+activities ⊥ romantic | age
+activities ⊥ school
+activities ⊥ schoolsup
+activities ⊥ studytime | age, failures, freetime, health, higher, paid, schoolsup, subject
+activities ⊥ studytime | age, failures, freetime, health, paid, school, schoolsup, subject
+activities ⊥ studytime | absences, age, freetime, health, paid, school, schoolsup, subject
+activities ⊥ studytime | age, freetime, paid, schoolsup, traveltime
+activities ⊥ subject
+activities ⊥ traveltime
+age ⊥ failures
+age ⊥ famrel
+age ⊥ famsup
+age ⊥ Fedu
+age ⊥ Fjob
+age ⊥ freetime | activities, goout, romantic
+age ⊥ goout
+age ⊥ G3 | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+age ⊥ G3 | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+age ⊥ G3 | activities, failures, famsup, freetime, goout, health, IQ, paid, romantic, school, schoolsup, studytime, subject
+age ⊥ G3 | activities, failures, famsup, freetime, goout, health, higher, IQ, paid, romantic, schoolsup, studytime, subject
+age ⊥ health
+age ⊥ higher
+age ⊥ IQ
+age ⊥ Medu
+age ⊥ Mjob
+age ⊥ paid
+age ⊥ school
+age ⊥ schoolsup
+age ⊥ subject
+age ⊥ traveltime
+failures ⊥ famrel | Fjob, Mjob
+failures ⊥ famrel | Fedu, Mjob
+failures ⊥ famrel | Fjob, Medu
+failures ⊥ famrel | Fedu, Medu
+failures ⊥ famrel | higher
+failures ⊥ famrel | school
+failures ⊥ famrel | traveltime
+failures ⊥ famrel | absences, subject
+failures ⊥ famsup | higher, subject
+failures ⊥ famsup | school, subject
+failures ⊥ famsup | subject, traveltime
+failures ⊥ famsup | absences, subject
+failures ⊥ Fedu | higher
+failures ⊥ Fedu | school
+failures ⊥ Fedu | traveltime
+failures ⊥ Fedu | absences, subject
+failures ⊥ Fjob | Fedu
+failures ⊥ Fjob | higher
+failures ⊥ Fjob | school
+failures ⊥ Fjob | traveltime
+failures ⊥ Fjob | absences, subject
+failures ⊥ freetime | paid, schoolsup, traveltime
+failures ⊥ freetime | absences, paid, school, schoolsup, subject
+failures ⊥ goout
+failures ⊥ health | absences, subject
+failures ⊥ higher | school
+failures ⊥ higher | traveltime
+failures ⊥ higher | absences, subject
+failures ⊥ IQ | higher
+failures ⊥ IQ | school
+failures ⊥ IQ | traveltime
+failures ⊥ IQ | absences, subject
+failures ⊥ Medu | higher
+failures ⊥ Medu | school
+failures ⊥ Medu | traveltime
+failures ⊥ Medu | absences, subject
+failures ⊥ Mjob | Medu
+failures ⊥ Mjob | higher
+failures ⊥ Mjob | school
+failures ⊥ Mjob | traveltime
+failures ⊥ Mjob | absences, subject
+failures ⊥ romantic
+failures ⊥ school | traveltime
+failures ⊥ school | absences, subject
+failures ⊥ traveltime | absences, subject
+famrel ⊥ Fedu | Fjob
+famrel ⊥ freetime | paid, schoolsup, traveltime
+famrel ⊥ freetime | absences, paid, school, schoolsup, subject
+famrel ⊥ freetime | failures, paid, school, subject
+famrel ⊥ freetime | failures, higher, paid, subject
+famrel ⊥ goout
+famrel ⊥ G3 | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+famrel ⊥ G3 | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+famrel ⊥ G3 | activities, failures, famsup, freetime, goout, health, IQ, paid, romantic, school, schoolsup, studytime, subject
+famrel ⊥ G3 | age, failures, famsup, freetime, health, IQ, paid, school, schoolsup, studytime, subject
+famrel ⊥ G3 | failures, famsup, higher, IQ, paid, subject
+famrel ⊥ G3 | failures, famsup, Fedu, higher, Medu, paid, subject
+famrel ⊥ G3 | failures, famsup, Fedu, higher, Mjob, paid, subject
+famrel ⊥ G3 | failures, famsup, Fjob, higher, Medu, paid, subject
+famrel ⊥ G3 | failures, famsup, Fjob, higher, Mjob, paid, subject
+famrel ⊥ health
+famrel ⊥ higher | Fedu, Medu
+famrel ⊥ higher | Fedu, Mjob
+famrel ⊥ higher | Fjob, Medu
+famrel ⊥ higher | Fjob, Mjob
+famrel ⊥ IQ
+famrel ⊥ Medu | Mjob
+famrel ⊥ romantic
+famrel ⊥ school | higher
+famrel ⊥ school | Fedu, Medu
+famrel ⊥ school | Fedu, Mjob
+famrel ⊥ school | Fjob, Medu
+famrel ⊥ school | Fjob, Mjob
+famrel ⊥ schoolsup | school
+famrel ⊥ schoolsup | higher
+famrel ⊥ schoolsup | Fedu, Medu
+famrel ⊥ schoolsup | Fedu, Mjob
+famrel ⊥ schoolsup | Fjob, Medu
+famrel ⊥ schoolsup | Fjob, Mjob
+famrel ⊥ studytime | failures, famsup, higher, IQ, paid, subject
+famrel ⊥ studytime | failures, famsup, Fedu, higher, Medu, paid, subject
+famrel ⊥ studytime | failures, famsup, Fedu, higher, Mjob, paid, subject
+famrel ⊥ studytime | failures, famsup, Fjob, higher, Medu, paid, subject
+famrel ⊥ studytime | failures, famsup, Fjob, higher, Mjob, paid, subject
+famrel ⊥ subject
+famrel ⊥ traveltime | school
+famrel ⊥ traveltime | higher
+famrel ⊥ traveltime | Fedu, Medu
+famrel ⊥ traveltime | Fedu, Mjob
+famrel ⊥ traveltime | Fjob, Medu
+famrel ⊥ traveltime | Fjob, Mjob
+famsup ⊥ Fedu | Fjob, higher, Medu
+famsup ⊥ Fedu | Fjob, higher, Mjob
+famsup ⊥ Fedu | famrel, higher
+famsup ⊥ Fjob | famrel, Fedu, Mjob
+famsup ⊥ Fjob | famrel, Fedu, Medu
+famsup ⊥ Fjob | famrel, higher
+famsup ⊥ freetime | paid, schoolsup, traveltime
+famsup ⊥ freetime | absences, paid, school, schoolsup, subject
+famsup ⊥ freetime | failures, paid, school, subject
+famsup ⊥ freetime | failures, higher, paid, subject
+famsup ⊥ goout
+famsup ⊥ health
+famsup ⊥ IQ | Fedu, higher, Medu
+famsup ⊥ IQ | Fedu, higher, Mjob
+famsup ⊥ IQ | Fjob, higher, Medu
+famsup ⊥ IQ | Fjob, higher, Mjob
+famsup ⊥ IQ | famrel, higher
+famsup ⊥ Medu | Fedu, higher, Mjob
+famsup ⊥ Medu | Fjob, higher, Mjob
+famsup ⊥ Medu | famrel, higher
+famsup ⊥ Mjob | famrel, Fjob, Medu
+famsup ⊥ Mjob | famrel, Fedu, Medu
+famsup ⊥ Mjob | famrel, higher
+famsup ⊥ romantic
+famsup ⊥ school | higher
+famsup ⊥ schoolsup | school, subject
+famsup ⊥ schoolsup | higher, subject
+famsup ⊥ traveltime | school
+famsup ⊥ traveltime | higher
+Fedu ⊥ freetime | paid, schoolsup, traveltime
+Fedu ⊥ freetime | absences, paid, school, schoolsup, subject
+Fedu ⊥ freetime | failures, paid, school, subject
+Fedu ⊥ freetime | failures, famrel, famsup, schoolsup, subject, traveltime
+Fedu ⊥ freetime | famrel, famsup, school, subject
+Fedu ⊥ freetime | failures, higher, paid, subject
+Fedu ⊥ freetime | famrel, higher
+Fedu ⊥ freetime | Fjob, higher, Mjob
+Fedu ⊥ freetime | Fjob, higher, Medu
+Fedu ⊥ goout
+Fedu ⊥ G3 | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+Fedu ⊥ G3 | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+Fedu ⊥ G3 | activities, failures, famsup, freetime, goout, health, IQ, paid, romantic, school, schoolsup, studytime, subject
+Fedu ⊥ G3 | age, failures, famsup, freetime, health, IQ, paid, school, schoolsup, studytime, subject
+Fedu ⊥ G3 | failures, famsup, higher, IQ, paid, subject
+Fedu ⊥ G3 | famrel, higher, IQ
+Fedu ⊥ G3 | Fjob, higher, IQ, Mjob
+Fedu ⊥ G3 | Fjob, higher, IQ, Medu
+Fedu ⊥ health
+Fedu ⊥ IQ
+Fedu ⊥ Medu
+Fedu ⊥ Mjob
+Fedu ⊥ paid | failures, famrel, famsup, subject
+Fedu ⊥ paid | absences, famrel, famsup, subject
+Fedu ⊥ paid | famrel, famsup, subject, traveltime
+Fedu ⊥ paid | famrel, famsup, school, subject
+Fedu ⊥ paid | famrel, higher
+Fedu ⊥ paid | Fjob, higher, Mjob
+Fedu ⊥ paid | Fjob, higher, Medu
+Fedu ⊥ romantic
+Fedu ⊥ school | higher
+Fedu ⊥ schoolsup | school
+Fedu ⊥ schoolsup | higher
+Fedu ⊥ studytime | failures, famsup, higher, IQ, paid, subject
+Fedu ⊥ studytime | famrel, higher, IQ
+Fedu ⊥ studytime | Fjob, higher, IQ, Mjob
+Fedu ⊥ studytime | Fjob, higher, IQ, Medu
+Fedu ⊥ subject
+Fedu ⊥ traveltime | school
+Fedu ⊥ traveltime | higher
+Fjob ⊥ freetime | paid, schoolsup, traveltime
+Fjob ⊥ freetime | absences, paid, school, schoolsup, subject
+Fjob ⊥ freetime | failures, paid, school, subject
+Fjob ⊥ freetime | failures, higher, paid, subject
+Fjob ⊥ freetime | failures, famrel, famsup, schoolsup, subject, traveltime
+Fjob ⊥ freetime | famrel, famsup, school, subject
+Fjob ⊥ freetime | famrel, higher
+Fjob ⊥ freetime | famrel, Fedu, Medu
+Fjob ⊥ freetime | famrel, Fedu, Mjob
+Fjob ⊥ goout
+Fjob ⊥ G3 | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+Fjob ⊥ G3 | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+Fjob ⊥ G3 | activities, failures, famsup, freetime, goout, health, IQ, paid, romantic, school, schoolsup, studytime, subject
+Fjob ⊥ G3 | age, failures, famsup, freetime, health, IQ, paid, school, schoolsup, studytime, subject
+Fjob ⊥ G3 | failures, famsup, higher, IQ, paid, subject
+Fjob ⊥ G3 | failures, famsup, Fedu, higher, Medu, paid, subject
+Fjob ⊥ G3 | famrel, higher, IQ
+Fjob ⊥ G3 | famrel, Fedu, Medu
+Fjob ⊥ G3 | failures, famsup, Fedu, higher, Mjob, paid, subject
+Fjob ⊥ G3 | famrel, Fedu, Mjob
+Fjob ⊥ health
+Fjob ⊥ higher | Fedu
+Fjob ⊥ IQ
+Fjob ⊥ Medu
+Fjob ⊥ Mjob
+Fjob ⊥ paid | failures, famrel, famsup, subject
+Fjob ⊥ paid | absences, famrel, famsup, subject
+Fjob ⊥ paid | famrel, famsup, subject, traveltime
+Fjob ⊥ paid | famrel, famsup, school, subject
+Fjob ⊥ paid | famrel, higher
+Fjob ⊥ paid | famrel, Fedu, Medu
+Fjob ⊥ paid | famrel, Fedu, Mjob
+Fjob ⊥ romantic
+Fjob ⊥ school | higher
+Fjob ⊥ school | Fedu
+Fjob ⊥ schoolsup | school
+Fjob ⊥ schoolsup | higher
+Fjob ⊥ schoolsup | Fedu
+Fjob ⊥ studytime | failures, famsup, higher, IQ, paid, subject
+Fjob ⊥ studytime | failures, famsup, Fedu, higher, Medu, paid, subject
+Fjob ⊥ studytime | famrel, higher, IQ
+Fjob ⊥ studytime | famrel, Fedu, Medu
+Fjob ⊥ studytime | failures, famsup, Fedu, higher, Mjob, paid, subject
+Fjob ⊥ studytime | famrel, Fedu, Mjob
+Fjob ⊥ subject
+Fjob ⊥ traveltime | school
+Fjob ⊥ traveltime | higher
+Fjob ⊥ traveltime | Fedu
+freetime ⊥ health | absences, subject, traveltime
+freetime ⊥ health | failures, subject, traveltime
+freetime ⊥ health | paid, schoolsup, traveltime
+freetime ⊥ higher | famrel, famsup, school, subject
+freetime ⊥ higher | failures, paid, school, subject
+freetime ⊥ higher | absences, paid, school, schoolsup, subject
+freetime ⊥ higher | failures, famrel, famsup, schoolsup, subject, traveltime
+freetime ⊥ higher | paid, schoolsup, traveltime
+freetime ⊥ IQ | Fedu, higher, Medu
+freetime ⊥ IQ | Fedu, higher, Mjob
+freetime ⊥ IQ | Fjob, higher, Medu
+freetime ⊥ IQ | Fjob, higher, Mjob
+freetime ⊥ IQ | famrel, higher
+freetime ⊥ IQ | famrel, famsup, school, subject
+freetime ⊥ IQ | failures, higher, paid, subject
+freetime ⊥ IQ | failures, paid, school, subject
+freetime ⊥ IQ | absences, paid, school, schoolsup, subject
+freetime ⊥ IQ | failures, famrel, famsup, schoolsup, subject, traveltime
+freetime ⊥ IQ | paid, schoolsup, traveltime
+freetime ⊥ Medu | Fedu, higher, Mjob
+freetime ⊥ Medu | Fjob, higher, Mjob
+freetime ⊥ Medu | famrel, higher
+freetime ⊥ Medu | famrel, famsup, school, subject
+freetime ⊥ Medu | failures, higher, paid, subject
+freetime ⊥ Medu | failures, paid, school, subject
+freetime ⊥ Medu | absences, paid, school, schoolsup, subject
+freetime ⊥ Medu | failures, famrel, famsup, schoolsup, subject, traveltime
+freetime ⊥ Medu | paid, schoolsup, traveltime
+freetime ⊥ Mjob | famrel, Fjob, Medu
+freetime ⊥ Mjob | famrel, Fedu, Medu
+freetime ⊥ Mjob | famrel, higher
+freetime ⊥ Mjob | famrel, famsup, school, subject
+freetime ⊥ Mjob | failures, higher, paid, subject
+freetime ⊥ Mjob | failures, paid, school, subject
+freetime ⊥ Mjob | absences, paid, school, schoolsup, subject
+freetime ⊥ Mjob | failures, famrel, famsup, schoolsup, subject, traveltime
+freetime ⊥ Mjob | paid, schoolsup, traveltime
+freetime ⊥ school | failures, higher, schoolsup, subject, traveltime
+freetime ⊥ school | failures, famrel, famsup, schoolsup, subject, traveltime
+freetime ⊥ school | paid, schoolsup, traveltime
+freetime ⊥ subject | paid, schoolsup, traveltime
+goout ⊥ G3 | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+goout ⊥ G3 | absences, age, failures, freetime, health, higher, paid, schoolsup, subject
+goout ⊥ G3 | absences, age, freetime, health, paid, school, schoolsup, subject
+goout ⊥ G3 | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+goout ⊥ G3 | age, freetime, paid, schoolsup, traveltime
+goout ⊥ health
+goout ⊥ higher
+goout ⊥ IQ
+goout ⊥ Medu
+goout ⊥ Mjob
+goout ⊥ paid
+goout ⊥ school
+goout ⊥ schoolsup
+goout ⊥ studytime | age, failures, freetime, health, higher, paid, schoolsup, subject
+goout ⊥ studytime | age, failures, freetime, health, paid, school, schoolsup, subject
+goout ⊥ studytime | absences, age, freetime, health, paid, school, schoolsup, subject
+goout ⊥ studytime | age, freetime, paid, schoolsup, traveltime
+goout ⊥ subject
+goout ⊥ traveltime
+G3 ⊥ higher | age, failures, famsup, freetime, health, IQ, paid, school, schoolsup, studytime, subject
+G3 ⊥ higher | activities, failures, famsup, freetime, goout, health, IQ, paid, romantic, school, schoolsup, studytime, subject
+G3 ⊥ higher | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+G3 ⊥ higher | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+G3 ⊥ Medu | Fedu, higher, IQ, Mjob
+G3 ⊥ Medu | Fjob, higher, IQ, Mjob
+G3 ⊥ Medu | famrel, higher, IQ
+G3 ⊥ Medu | failures, famsup, higher, IQ, paid, subject
+G3 ⊥ Medu | age, failures, famsup, freetime, health, IQ, paid, school, schoolsup, studytime, subject
+G3 ⊥ Medu | activities, failures, famsup, freetime, goout, health, IQ, paid, romantic, school, schoolsup, studytime, subject
+G3 ⊥ Medu | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+G3 ⊥ Medu | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+G3 ⊥ Mjob | famrel, Fjob, Medu
+G3 ⊥ Mjob | famrel, Fedu, Medu
+G3 ⊥ Mjob | famrel, higher, IQ
+G3 ⊥ Mjob | failures, famsup, Fjob, higher, Medu, paid, subject
+G3 ⊥ Mjob | failures, famsup, Fedu, higher, Medu, paid, subject
+G3 ⊥ Mjob | failures, famsup, higher, IQ, paid, subject
+G3 ⊥ Mjob | age, failures, famsup, freetime, health, IQ, paid, school, schoolsup, studytime, subject
+G3 ⊥ Mjob | activities, failures, famsup, freetime, goout, health, IQ, paid, romantic, school, schoolsup, studytime, subject
+G3 ⊥ Mjob | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+G3 ⊥ Mjob | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+G3 ⊥ romantic | age, freetime, paid, schoolsup, traveltime
+G3 ⊥ romantic | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+G3 ⊥ romantic | absences, age, freetime, health, paid, school, schoolsup, subject
+G3 ⊥ romantic | absences, age, failures, freetime, health, higher, paid, schoolsup, subject
+G3 ⊥ romantic | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+G3 ⊥ school | failures, higher, schoolsup, subject, traveltime
+G3 ⊥ school | failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject, traveltime
+G3 ⊥ school | absences, activities, failures, freetime, goout, health, higher, paid, romantic, schoolsup, subject
+G3 ⊥ school | absences, age, failures, freetime, health, higher, paid, schoolsup, subject
+G3 ⊥ school | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+G3 ⊥ traveltime | absences, activities, freetime, goout, health, paid, romantic, school, schoolsup, subject
+G3 ⊥ traveltime | absences, age, freetime, health, paid, school, schoolsup, subject
+G3 ⊥ traveltime | absences, activities, failures, freetime, goout, health, higher, paid, romantic, schoolsup, subject
+G3 ⊥ traveltime | absences, age, failures, freetime, health, higher, paid, schoolsup, subject
+G3 ⊥ traveltime | absences, failures, famsup, freetime, health, IQ, paid, schoolsup, studytime, subject
+health ⊥ higher
+health ⊥ IQ
+health ⊥ Medu
+health ⊥ Mjob
+health ⊥ paid | failures, famrel, famsup, subject
+health ⊥ paid | failures, higher, subject
+health ⊥ paid | failures, school, subject
+health ⊥ paid | absences, famrel, famsup, subject
+health ⊥ paid | absences, higher, subject
+health ⊥ paid | absences, school, subject
+health ⊥ paid | failures, subject, traveltime
+health ⊥ paid | absences, subject, traveltime
+health ⊥ romantic
+health ⊥ school
+health ⊥ schoolsup | failures, school, subject
+health ⊥ schoolsup | absences, school, subject
+health ⊥ schoolsup | failures, subject, traveltime
+health ⊥ schoolsup | absences, subject, traveltime
+health ⊥ subject
+health ⊥ traveltime
+higher ⊥ Mjob | Medu
+higher ⊥ paid | failures, famrel, famsup, subject
+higher ⊥ paid | absences, famrel, famsup, subject
+higher ⊥ paid | famrel, famsup, subject, traveltime
+higher ⊥ paid | famrel, famsup, school, subject
+higher ⊥ romantic
+higher ⊥ schoolsup | school
+higher ⊥ subject
+higher ⊥ traveltime | school
+IQ ⊥ Medu
+IQ ⊥ Mjob
+IQ ⊥ paid | failures, famrel, famsup, subject
+IQ ⊥ paid | absences, famrel, famsup, subject
+IQ ⊥ paid | famrel, famsup, subject, traveltime
+IQ ⊥ paid | famrel, famsup, school, subject
+IQ ⊥ paid | famrel, higher
+IQ ⊥ paid | Fjob, higher, Mjob
+IQ ⊥ paid | Fedu, higher, Mjob
+IQ ⊥ paid | Fjob, higher, Medu
+IQ ⊥ paid | Fedu, higher, Medu
+IQ ⊥ romantic
+IQ ⊥ school | higher
+IQ ⊥ schoolsup | school
+IQ ⊥ schoolsup | higher
+IQ ⊥ subject
+IQ ⊥ traveltime | school
+IQ ⊥ traveltime | higher
+Medu ⊥ paid | failures, famrel, famsup, subject
+Medu ⊥ paid | absences, famrel, famsup, subject
+Medu ⊥ paid | famrel, famsup, subject, traveltime
+Medu ⊥ paid | famrel, famsup, school, subject
+Medu ⊥ paid | famrel, higher
+Medu ⊥ paid | Fjob, higher, Mjob
+Medu ⊥ paid | Fedu, higher, Mjob
+Medu ⊥ romantic
+Medu ⊥ school | higher
+Medu ⊥ schoolsup | school
+Medu ⊥ schoolsup | higher
+Medu ⊥ studytime | failures, famsup, higher, IQ, paid, subject
+Medu ⊥ studytime | famrel, higher, IQ
+Medu ⊥ studytime | Fjob, higher, IQ, Mjob
+Medu ⊥ studytime | Fedu, higher, IQ, Mjob
+Medu ⊥ subject
+Medu ⊥ traveltime | school
+Medu ⊥ traveltime | higher
+Mjob ⊥ paid | failures, famrel, famsup, subject
+Mjob ⊥ paid | absences, famrel, famsup, subject
+Mjob ⊥ paid | famrel, famsup, subject, traveltime
+Mjob ⊥ paid | famrel, famsup, school, subject
+Mjob ⊥ paid | famrel, higher
+Mjob ⊥ paid | famrel, Fedu, Medu
+Mjob ⊥ paid | famrel, Fjob, Medu
+Mjob ⊥ romantic
+Mjob ⊥ school | higher
+Mjob ⊥ school | Medu
+Mjob ⊥ schoolsup | school
+Mjob ⊥ schoolsup | higher
+Mjob ⊥ schoolsup | Medu
+Mjob ⊥ studytime | failures, famsup, higher, IQ, paid, subject
+Mjob ⊥ studytime | failures, famsup, Fedu, higher, Medu, paid, subject
+Mjob ⊥ studytime | failures, famsup, Fjob, higher, Medu, paid, subject
+Mjob ⊥ studytime | famrel, higher, IQ
+Mjob ⊥ studytime | famrel, Fedu, Medu
+Mjob ⊥ studytime | famrel, Fjob, Medu
+Mjob ⊥ subject
+Mjob ⊥ traveltime | school
+Mjob ⊥ traveltime | higher
+Mjob ⊥ traveltime | Medu
+paid ⊥ romantic
+paid ⊥ school | higher, traveltime
+paid ⊥ school | absences, higher, subject
+paid ⊥ school | famrel, famsup, subject, traveltime
+paid ⊥ school | absences, famrel, famsup, subject
+paid ⊥ school | failures, higher, subject
+paid ⊥ school | failures, famrel, famsup, subject
+paid ⊥ schoolsup | failures, school, subject
+paid ⊥ schoolsup | failures, higher, subject
+paid ⊥ schoolsup | failures, famrel, famsup, subject
+paid ⊥ traveltime | absences, school, subject
+paid ⊥ traveltime | absences, higher, subject
+paid ⊥ traveltime | absences, famrel, famsup, subject
+paid ⊥ traveltime | failures, school, subject
+paid ⊥ traveltime | failures, higher, subject
+paid ⊥ traveltime | failures, famrel, famsup, subject
+romantic ⊥ school
+romantic ⊥ schoolsup
+romantic ⊥ studytime | age, failures, freetime, health, higher, paid, schoolsup, subject
+romantic ⊥ studytime | age, failures, freetime, health, paid, school, schoolsup, subject
+romantic ⊥ studytime | absences, age, freetime, health, paid, school, schoolsup, subject
+romantic ⊥ studytime | age, freetime, paid, schoolsup, traveltime
+romantic ⊥ subject
+romantic ⊥ traveltime
+school ⊥ studytime | age, failures, freetime, health, higher, paid, schoolsup, subject
+school ⊥ studytime | activities, failures, freetime, goout, health, higher, paid, romantic, schoolsup, subject
+school ⊥ studytime | failures, higher, schoolsup, subject, traveltime
+school ⊥ subject
+schoolsup ⊥ traveltime | absences, school, subject
+schoolsup ⊥ traveltime | failures, school, subject
+studytime ⊥ traveltime | absences, activities, freetime, goout, health, paid, romantic, school, schoolsup, subject
+studytime ⊥ traveltime | absences, age, freetime, health, paid, school, schoolsup, subject
+studytime ⊥ traveltime | activities, failures, freetime, goout, health, paid, romantic, school, schoolsup, subject
+studytime ⊥ traveltime | age, failures, freetime, health, paid, school, schoolsup, subject
+studytime ⊥ traveltime | activities, failures, freetime, goout, health, higher, paid, romantic, schoolsup, subject
+studytime ⊥ traveltime | age, failures, freetime, health, higher, paid, schoolsup, subject
+subject ⊥ traveltime
