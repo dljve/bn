@@ -70,7 +70,10 @@ def test_independence(df, var1, var2, condition_vars=None):
     if not condition_vars:
         observed = pd.crosstab(df[var1], df[var2])
         chi_stat, p_value, dof, expected = stats.chi2_contingency(observed)
-        RMSEA = np.sqrt((chi_stat/dof-1)/(N-1))
+        if chi_stat < dof:
+            RMSEA = 0
+        else:
+            RMSEA = np.sqrt((chi_stat/dof-1)/(N-1))
     else:
         observed_combinations = df.groupby(condition_vars).size().reset_index()
         chi_stat = 0
@@ -84,7 +87,11 @@ def test_independence(df, var1, var2, condition_vars=None):
             chi_stat += chi
             dof += freedom        
         
-        RMSEA = np.sqrt((chi_stat**2/dof-1)/(N-1))
+        if chi_stat < dof:
+            RMSEA = 0
+        else:
+            RMSEA = np.sqrt((chi_stat/dof-1)/(N-1))
+            
         p_value = 1.0 - stats.chi2.cdf(x=chi_stat, df=dof)
 
     return chi_stat, p_value, dof, RMSEA
@@ -92,7 +99,7 @@ def test_independence(df, var1, var2, condition_vars=None):
 ### For defining the network in python, the package pgmpy can be used but it will work only for directed graphs.
 from pgmpy.models import BayesianModel
 
-model = BayesianModel([
+bnmodel = [
     ('absences', 'G3'),
     ('activities', 'freetime'),
     ('age', 'activities'),
@@ -153,7 +160,9 @@ model = BayesianModel([
     # ('failures', 'absences'),
     # ('freetime', 'activities'),
     # ('studytime', 'freetime'),
-])
+]
+
+model = BayesianModel(bnmodel)
 
 # To test any implied condition in the network, the method `is_active_trail` can be used. Next line tests for 
 # the condition (Education _|_ MaritalStatus | Age)
@@ -170,14 +179,34 @@ active = model.is_active_trail(var1, var2, observed=observed) # is dependent
 # To perform chi-square test on any of the conditional independencies, the method `test_independence` defined
 # above can be used. To test for (Education _|_ HoursPerWeek | 'Age', 'Immigrant', 'Sex')
 
-tests = [('paid','G3')
-         ]
 
-for (var1,var2) in tests:
+independent, dependent, questionable = [], [], []
+
+for (var1,var2) in bnmodel:
+    if var1 == 'IQ' or var2 == 'IQ':
+        continue
     chi_stat, p_value, dof, RMSEA = test_independence(df=df, var1=var1, var2=var2, condition_vars=observed)
-    print(chi_stat, p_value, dof, RMSEA)
+    
+    if RMSEA < 0.05:
+        independent.append((var1, var2, chi_stat, p_value, dof, RMSEA))
+    elif RMSEA < 0.09:
+        questionable.append((var1, var2, chi_stat, p_value, dof, RMSEA))
+    else:
+        dependent.append((var1, var2, chi_stat, p_value, dof, RMSEA))
+        
+    
+print("Independent")
+for (var1, var2, chi_stat, p_value, dof, RMSEA) in independent:
+    print("{} _|_ {}\t{}\t{}\t{}\t{}".format(var1, var2, chi_stat, p_value, dof, RMSEA))
 
+print("Questionable")
+for (var1, var2, chi_stat, p_value, dof, RMSEA) in questionable:
+    print("{} _|_ {}\t{}\t{}\t{}\t{}".format(var1, var2, chi_stat, p_value, dof, RMSEA))
 
+print("Dependent")
+for (var1, var2, chi_stat, p_value, dof, RMSEA) in dependent:
+    print("{} _|_ {}\t{}\t{}\t{}\t{}".format(var1, var2, chi_stat, p_value, dof, RMSEA))
+        
 
 """
 Test all independences
