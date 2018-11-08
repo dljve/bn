@@ -298,3 +298,49 @@ School -> Schoolsup
 School -> Traveltime
 Subject -> Paid
 }
+
+%Optie revised
+dag {
+Absences [pos="0.525,0.099"]
+Activities [pos="0.703,0.066"]
+Age [pos="0.740,-0.029"]
+Failures [pos="0.388,0.025"]
+Famrel [pos="0.631,0.098"]
+Famsup [pos="0.478,0.032"]
+Fedu [pos="0.649,-0.049"]
+Fjob [pos="0.650,-0.005"]
+Freetime [pos="0.703,0.146"]
+Goout [pos="0.755,0.114"]
+Grades [pos="0.536,0.177"]
+Health [pos="0.578,0.099"]
+Higher [pos="0.565,0.005"]
+Medu [pos="0.476,-0.049"]
+Mjob [pos="0.478,-0.007"]
+Paid [pos="0.307,0.080"]
+Romantic [pos="0.741,0.027"]
+School [pos="0.654,0.030"]
+Schoolsup [pos="0.266,0.129"]
+Studytime [pos="0.388,0.147"]
+Subject [pos="0.306,0.026"]
+Traveltime [pos="0.655,0.067"]
+Activities -> Freetime
+Age -> Romantic
+Failures -> Grades
+Failures -> Studytime
+Famsup -> Paid
+Famsup -> Studytime
+Fedu -> Fjob
+Fedu -> Higher
+Freetime -> Studytime
+Goout -> Freetime
+Higher -> Famsup
+Higher -> School
+Higher -> Studytime
+Medu -> Higher
+Medu -> Mjob
+School -> Schoolsup
+School -> Traveltime
+Schoolsup -> Studytime
+Subject -> Grades
+Subject -> Paid
+}
