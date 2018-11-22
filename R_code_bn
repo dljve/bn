@@ -1,0 +1,101 @@
+#Install dagitty
+
+install.packages("devtools") # unless you have it already
+library(devtools)
+devtools::install_github("jtextor/dagitty/r")
+#install_github("jtextor/dagitty/r")
+
+#Optie unlooped
+library( dagitty )
+g <- dagitty('
+dag {
+Absences -> Failures
+Absences -> Grades
+Activities -> Freetime
+Age -> Activities
+Age -> Romantic
+Age -> Studytime
+Failures -> Grades
+Failures -> Paid
+Failures -> Schoolsup
+Failures -> Studytime
+Famrel -> Famsup
+Famrel -> Paid
+Famsup -> Grades
+Famsup -> Paid
+Famsup -> Studytime
+Fedu -> Fjob
+Fedu -> Higher
+Fjob -> Famrel
+Freetime -> Grades
+Freetime -> Studytime
+Goout -> Freetime
+Goout -> Romantic
+Health -> Absences
+Health -> Grades
+Health -> Studytime
+Higher -> Famsup
+Higher -> School
+Higher -> Studytime
+Medu -> Higher
+Medu -> Mjob
+Mjob -> Famrel
+Paid -> Freetime
+Paid -> Grades
+Paid -> Studytime
+Romantic -> Freetime
+School -> Schoolsup
+School -> Traveltime
+Schoolsup -> Freetime
+Schoolsup -> Grades
+Schoolsup -> Studytime
+Studytime -> Grades
+Subject -> Absences
+Subject -> Failures
+Subject -> Famsup
+Subject -> Grades
+Subject -> Paid
+Subject -> Schoolsup
+Subject -> Studytime
+Traveltime -> Absences
+Traveltime -> Freetime
+}
+')
+
+# Print out all d-separation statements implied by the DAG.
+impliedConditionalIndependencies(g)
+
+# This single command performs a chi-square test for all implied conditional
+# independencies from g on the dataset g, and reports the statistic, p-value
+# and the RMSEA for each test.
+localTests(g,d,type="cis.chisq")
+
+install.packages('bnlearn’)
+library(bnlearn)
+
+#Import data
+
+d <- read.csv("/home/mdegrauw/Downloads/bn-master/matpor_concat.csv")
+
+#Remove duplicate rownumber row
+
+d <- d[,-1]
+
+# Let's take a quick look at the levels and distributions of each variable.
+for( i in colnames(d) ){
+	print(i)
+	print(table(d[,i]))
+}
+
+g2 <- pc.stable(d)
+plot(g2)
+amat(g2)
+
+g3 <- pc.stable(diabetes,alpha=0.01)
+plot(g3)
+amat(g3)
+
+d$G1 <- cut(d$G1, c(-1,5,10,15,20))
+d$G2 <- cut(d$G2, c(-1,5,10,15,20))
+d$G3 <- cut(d$G3, c(-1,5,10,15,20))
+d$absences <- cut(d$absences, c(-1,0,5,10,20,75))
