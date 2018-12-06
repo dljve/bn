@@ -344,3 +344,76 @@ Schoolsup -> Studytime
 Subject -> Grades
 Subject -> Paid
 }
+
+%Final inital diagram
+dag {
+Absences [pos="0.522,0.067"]
+Activities [pos="0.794,0.056"]
+Age [pos="0.820,-0.003"]
+Failures [pos="0.436,0.087"]
+Famrel [pos="0.435,-0.001"]
+Famsup [pos="0.509,0.024"]
+Fedu [pos="0.675,-0.049"]
+Fjob [pos="0.579,-0.030"]
+Freetime [pos="0.776,0.117"]
+Goout [pos="0.818,0.081"]
+Grades [pos="0.435,0.171"]
+Health [pos="0.715,0.049"]
+Higher [pos="0.581,-0.001"]
+IQ [pos="0.791,-0.045"]
+Medu [pos="0.428,-0.049"]
+Mjob [pos="0.332,-0.025"]
+Paid [pos="0.321,0.102"]
+Romantic [pos="0.866,0.105"]
+School [pos="0.655,0.011"]
+Schoolsup [pos="0.672,0.095"]
+Studytime [pos="0.682,0.152"]
+Traveltime [pos="0.578,0.042"]
+Absences -> Failures
+Absences -> Grades
+Activities -> Freetime
+Age -> Activities
+Age -> Romantic
+Age -> Studytime
+Failures -> Grades
+Failures -> Paid
+Failures -> Schoolsup
+Failures -> Studytime
+Famrel -> Famsup
+Famrel -> Paid
+Famsup -> Grades
+Famsup -> Paid
+Famsup -> Studytime
+Fedu -> Fjob
+Fedu -> Higher
+Fjob -> Famrel
+Freetime -> Grades
+Freetime -> Studytime
+Goout -> Freetime
+Goout -> Romantic
+Health -> Absences
+Health -> Grades
+Health -> Studytime
+Higher -> Famsup
+Higher -> School
+Higher -> Studytime
+IQ -> Grades
+IQ -> Higher
+IQ -> Studytime
+Medu -> Higher
+Medu -> Mjob
+Mjob -> Famrel
+Paid -> Freetime
+Paid -> Grades
+Paid -> Studytime
+Romantic -> Freetime
+School -> Schoolsup
+School -> Traveltime
+Schoolsup -> Freetime
+Schoolsup -> Grades
+Schoolsup -> Studytime
+Studytime -> Grades
+Traveltime -> Absences
+Traveltime -> Freetime
+}
+
