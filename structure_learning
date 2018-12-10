@@ -1,0 +1,39 @@
+install.packages('bnlearn')
+library(bnlearn)
+
+d <- read.csv('/student-por.csv', sep=';')
+d$G1 <- NULL
+d$G2 <- NULL
+d$Dalc <- NULL
+d$Walc <- NULL
+d$sex <- NULL
+d$guardian <- NULL
+d$nursery <- NULL
+d$internet <- NULL
+d$address <- NULL
+d$reason <- NULL
+d$famsize <- NULL
+d$Pstatus <- NULL
+
+d$age <- cut2(d$age, g = 4, oneval=FALSE)
+d$absences <- cut2(d$absences, g = 4, oneval=FALSE)
+d$G3 <- cut2(d$G3, g = 4, oneval=FALSE)
+
+d$Medu <- as.factor(d$Medu)
+d$Fedu <- as.factor(d$Fedu)
+d$traveltime <- as.factor(d$traveltime)
+d$studytime <- as.factor(d$studytime)
+d$failures <- as.factor(d$failures)
+d$famrel <- as.factor(d$famrel)
+d$freetime <- as.factor(d$freetime)
+d$goout <- as.factor(d$goout)
+d$health <- as.factor(d$health)
+
+g <- pc.stable(d)
+plot(g)
+
+g2 <- hc(d)
+plot(g2)
+
+g3 <- tabu(d)
+plot(g3)
