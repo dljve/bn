@@ -1,0 +1,83 @@
+dag {
+Absences [pos="0.557,0.055"]
+Activities [pos="0.733,0.098"]
+Age [pos="0.857,0.039"]
+Failures [pos="0.435,0.061"]
+Famrel [pos="0.448,0.011"]
+Famsup [pos="0.519,0.028"]
+Fedu [pos="0.646,-0.026"]
+Fjob [pos="0.577,-0.012"]
+Freetime [pos="0.735,0.145"]
+G3 [pos="0.563,0.168"]
+Goout [pos="0.801,0.115"]
+Health [pos="0.632,0.066"]
+Higher [pos="0.598,0.015"]
+IQ [pos="0.859,-0.017"]
+Medu [pos="0.502,-0.032"]
+Mjob [pos="0.491,-0.012"]
+Paid [pos="0.351,0.064"]
+Romantic [pos="0.852,0.136"]
+School [pos="0.670,0.022"]
+Schoolsup [pos="0.258,0.113"]
+Studytime [pos="0.366,0.145"]
+Traveltime [pos="0.629,0.037"]
+Failures -> G3
+Fedu -> Fjob
+Fedu -> Higher
+Fjob -> Famrel
+Goout -> Freetime
+Higher -> School
+Higher -> Studytime
+Medu -> Higher
+Medu -> Mjob
+School -> Schoolsup
+School -> Traveltime
+}
+
+
+Independent
+age ⊥ activities&2.76&0.4309&3&0\\ \hline
+age ⊥ studytime&9.04&0.4333&9&0.0027\\ \hline
+failures ⊥ paid&4.19&0.242&3&0.0247\\ \hline
+failures ⊥ schoolsup&0.54&0.9094&3&0\\ \hline
+famrel ⊥ famsup&3.85&0.427&4&0\\ \hline
+famrel ⊥ paid&2.09&0.7196&4&0\\ \hline
+famsup ⊥ G3&1.11&0.7735&3&0\\ \hline
+Fjob ⊥ famrel&29.02&0.0238&16&0.0354\\ \hline
+freetime ⊥ G3&25.9&0.0111&12&0.0423\\ \hline
+goout ⊥ romantic&3.34&0.5023&4&0\\ \hline
+health ⊥ absences&3.12&0.9268&8&0\\ \hline
+health ⊥ G3&26.03&0.0106&12&0.0425\\ \hline
+health ⊥ studytime&25.45&0.0128&12&0.0416\\ \hline
+Mjob ⊥ famrel&13.85&0.61&16&0\\ \hline
+paid ⊥ freetime&4.39&0.3554&4&0.0123\\ \hline
+paid ⊥ G3&4.06&0.2551&3&0.0233\\ \hline
+paid ⊥ studytime&1.05&0.7893&3&0\\ \hline
+romantic ⊥ freetime&6.86&0.1437&4&0.0332\\ \hline
+schoolsup ⊥ freetime&5.68&0.224&4&0.0255\\ \hline
+traveltime ⊥ absences&2.2&0.9004&6&0\\ \hline
+traveltime ⊥ freetime&10.59&0.5644&12&0\\ \hline
+absences ⊥ failures&14.75&0.0223&6&0.0474\\ \hline
+Questionable
+absences ⊥ G3&22.66&0.0009&6&0.0655\\ \hline
+activities ⊥ freetime&20.39&0.0004&4&0.0795\\ \hline
+age ⊥ romantic&18.31&0.0004&3&0.0887\\ \hline
+failures ⊥ studytime&23.88&0.0045&9&0.0505\\ \hline
+famsup ⊥ paid&4.98&0.0256&1&0.0784\\ \hline
+famsup ⊥ studytime&16.65&0.0008&3&0.0838\\ \hline
+freetime ⊥ studytime&41.07&0.0&12&0.0611\\ \hline
+higher ⊥ famsup&4.18&0.041&1&0.07\\ \hline
+schoolsup ⊥ G3&14.68&0.0021&3&0.0775\\ \hline
+schoolsup ⊥ studytime&9.17&0.0272&3&0.0563\\ \hline
+studytime ⊥ G3&48.77&0.0&9&0.0826\\ \hline
+Dependent
+failures ⊥ G3&148.03&0.0&9&0.1544\\ \hline
+Fedu ⊥ Fjob&200.77&0.0&16&0.1335\\ \hline
+Fedu ⊥ higher&28.17&0.0&4&0.0966\\ \hline
+goout ⊥ freetime&144.61&0.0&16&0.1114\\ \hline
+higher ⊥ school&11.11&0.0009&1&0.1249\\ \hline
+higher ⊥ studytime&34.3&0.0&3&0.1269\\ \hline
+Medu ⊥ higher&30.59&0.0&4&0.1013\\ \hline
+Medu ⊥ Mjob&378.37&0.0&16&0.187\\ \hline
+school ⊥ schoolsup&9.05&0.0026&1&0.1114\\ \hline
+school ⊥ traveltime&61.12&0.0&3&0.1729\\ \hline
