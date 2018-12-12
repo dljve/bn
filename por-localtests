@@ -41,4 +41,5 @@ Mjob -> Fjob
 Higher -> G3
 Higher -> Failures
 Higher -> School
+School -> Failures
 }
