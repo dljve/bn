@@ -417,3 +417,47 @@ Traveltime -> Absences
 Traveltime -> Freetime
 }
 
+%12dec
+dag {
+Absences [pos="0.817,-0.024"]
+Activities [pos="0.714,-0.023"]
+Age [pos="0.766,0.024"]
+Failures [pos="0.387,0.073"]
+Famrel [pos="0.473,0.018"]
+Famsup [pos="0.766,-0.043"]
+Fedu [pos="0.632,-0.046"]
+Fjob [pos="0.559,-0.004"]
+Freetime [pos="0.770,0.131"]
+G3 [pos="0.570,0.168"]
+Goout [pos="0.769,0.069"]
+Health [pos="0.714,0.013"]
+Higher [pos="0.568,0.024"]
+Medu [pos="0.333,-0.045"]
+Mjob [pos="0.394,-0.006"]
+Paid [pos="0.819,0.011"]
+Romantic [pos="0.766,-0.012"]
+School [pos="0.669,0.070"]
+Schoolsup [pos="0.614,0.104"]
+Studytime [pos="0.425,0.136"]
+Traveltime [pos="0.668,0.132"]
+Failures -> G3
+Fedu -> Fjob
+Fedu -> Higher
+Fedu -> Medu
+Fedu -> Mjob
+Fjob -> Famrel
+Fjob -> Mjob
+Goout -> Freetime
+Higher -> Failures
+Higher -> G3
+Higher -> School
+Higher -> Studytime
+Medu -> Fedu
+Medu -> Fjob
+Medu -> Higher
+Medu -> Mjob
+Mjob -> Fjob
+School -> Failures
+School -> Schoolsup
+School -> Traveltime
+}
