@@ -1,0 +1,77 @@
+source("https://bioconductor.org/biocLite.R")
+biocLite("graph")
+biocLite("RBGL")
+biocLite('Rgraphviz')
+
+install.packages('gRain')
+
+library("Rgraphviz")
+library('gRain')
+
+library(bnlearn)
+
+d <- read.csv('/home/max/Documents/M1/Bayesian Networks/A2/student-por.csv', sep=';')
+d$G1 <- NULL
+d$G2 <- NULL
+d$Dalc <- NULL
+d$Walc <- NULL
+d$sex <- NULL
+d$guardian <- NULL
+d$nursery <- NULL
+d$internet <- NULL
+d$address <- NULL
+d$reason <- NULL
+d$famsize <- NULL
+d$Pstatus <- NULL
+
+library(Hmisc)
+d$age <- cut2(d$age, g = 4, oneval=FALSE)
+d$absences <- cut2(d$absences, g = 4, oneval=FALSE)
+d$G3 <- cut2(d$G3, g = 4, oneval=FALSE)
+
+d$Medu <- as.factor(d$Medu)
+d$Fedu <- as.factor(d$Fedu)
+d$traveltime <- as.factor(d$traveltime)
+d$studytime <- as.factor(d$studytime)
+d$failures <- as.factor(d$failures)
+d$famrel <- as.factor(d$famrel)
+d$freetime <- as.factor(d$freetime)
+d$goout <- as.factor(d$goout)
+d$health <- as.factor(d$health)
+
+for( i in colnames(d) ){
+	print(i)
+	print(table(d[,i]))
+}
+
+V <- c("absences","activities","age","failures","famrel","famsup","Fedu","Fjob","freetime","G3","goout","health","higher","Medu","Mjob","paid","romantic","school","schoolsup","studytime","traveltime")
+sp.dag = new("graphNEL", nodes = V, edgemode = "directed")
+
+sp.dag = addEdge("failures", "G3", sp.dag)
+sp.dag = addEdge("higher", "G3", sp.dag)
+sp.dag = addEdge("Medu", "Fjob", sp.dag)
+sp.dag = addEdge("Mjob", "Fjob", sp.dag)
+sp.dag = addEdge("Fedu", "Fjob", sp.dag)
+sp.dag = addEdge("Fedu", "Mjob", sp.dag)
+sp.dag = addEdge("Medu", "Mjob", sp.dag)
+sp.dag = addEdge("Fedu", "Medu", sp.dag)
+sp.dag = addEdge("Fjob", "famrel", sp.dag)
+sp.dag = addEdge("goout", "freetime", sp.dag)
+sp.dag = addEdge("higher", "failures", sp.dag)
+sp.dag = addEdge("higher", "school", sp.dag)
+sp.dag = addEdge("higher", "studytime", sp.dag)
+sp.dag = addEdge("school", "failures", sp.dag)
+sp.dag = addEdge("schoolsup", "school", sp.dag)
+sp.dag = addEdge("school", "traveltime", sp.dag)
+sp.dag = addEdge("Fedu", "higher", sp.dag)
+sp.dag = addEdge("Medu", "higher", sp.dag)
+
+plot(sp.dag)
+
+sp.gr <- compile(grain(sp.dag, d))
+
+summary(sp.gr)
+
+predict(sp.gr, response = c("G3"), newdata = d, predictors = c("absences","activities","age","failures","famrel","famsup","Fedu","Fjob","freetime","goout","health","higher","Medu","Mjob","paid","romantic","school","schoolsup","studytime","traveltime")
+, type = "class")
+
